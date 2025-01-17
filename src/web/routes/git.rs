@@ -32,9 +32,9 @@ pub async fn get_assets(path: String) -> HttpResponse {
     }
     
     // check if file ./assets/{path} exists and is a file
-    if fs::metadata(format!("./vulns/git/{}", path.clone())).is_ok() && fs::metadata(format!("./assets/{}", path.clone())).unwrap().is_file() {
+    if fs::metadata(format!("./vulns/gitleak/{}", path.clone())).is_ok() && fs::metadata(format!("./vulns/gitleak/{}", path.clone())).unwrap().is_file() {
         // read file as buffer
-        let file = fs::read(format!("./assets/{}", path.clone())).unwrap();
+        let file = fs::read(format!("./vulns/gitleak/{}", path.clone())).unwrap();
         let file_extension = path.split(".").collect::<Vec<&str>>().pop().map(|ext| ext.to_lowercase()).unwrap();
 
 
