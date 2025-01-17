@@ -11,7 +11,7 @@ Sweet Candy is a honeypot software designed to attract and analyze the behavior 
 ![](./.github/banner.png)
 
 > [!IMPORTANT]  
-> 管理パネルは現在作成中です
+> 管理パネルは現在作成中です\
 > The admin panel is currently under construction
 
 # サポートされている脆弱性
