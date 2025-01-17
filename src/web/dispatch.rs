@@ -29,6 +29,9 @@ pub async fn nonlogged(request_data:RequestData) -> HttpResponse {
     path if path.starts_with("/vulns/.git/") => {
       return git::get_assets(request_data.path).await;
     },
+    path if path.starts_with("/vulns/wp-") => {
+      return wp::main(request_data.path).await;
+    },
 
   
     // default route: 404
